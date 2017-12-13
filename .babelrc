@@ -1,17 +1,29 @@
 {
-	"presets": ["next/babel", "env", "stage-0"],
-	"plugins": [[
-		"import", {
-			"libraryName": "antd",
-			"libraryDirectory": "lib",
-			"style": false
-		}
-	], [
-		"css-modules-transform", {
-			"extensions": [".css", ".less"],
-			"extractCss": "./static/css/styles.css",
-			"generateScopedName": "[name]-[local]_[hash:base64:5]",
-			"preprocessCss": "less-loader"
-		}
-	]]
+  "plugins": [
+    ["module-resolver", {
+      "root": ["."],
+      "alias": {
+        "css": "./assets/css"
+      },
+      "cwd": "babelrc"
+    }],
+    ["wrap-in-js", {
+      "extensions": ["css$", "less$", "scss$"]
+    }],
+    ["import", {
+      "libraryName": "antd",
+      "libraryDirectory": "lib",
+      "style": false
+    }],
+    "transform-decorators-legacy"
+  ],
+  "presets": ["env", "next/babel", "stage-0"],
+  "env": {
+    "development": {
+      "plugins": ["inline-dotenv"]
+    },
+    "production": {
+      "plugins": ["transform-inline-environment-variables"]
+    }
+  }
 }
