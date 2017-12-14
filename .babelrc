@@ -3,7 +3,8 @@
     ["module-resolver", {
       "root": ["."],
       "alias": {
-        "css": "./assets/css"
+        "css": "./assets/css",
+        "components": "./components"
       },
       "cwd": "babelrc"
     }],

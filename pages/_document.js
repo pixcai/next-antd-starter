@@ -1,10 +1,6 @@
-import Document, {
-  Head,
-  Main,
-  NextScript
-} from 'next/document'
+import Document, { Head, Main, NextScript } from 'next/document'
 // css/styles.less -> ../assets/css/styles.less
-// see .babelrc from more detail
+// see .babelrc for more detail
 import styles from 'css/styles.less'
 
 export default class GlobalDocument extends Document {
