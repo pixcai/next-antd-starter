@@ -1,5 +1,7 @@
 module.exports = {
   plugins: [
-    require('postcss-easy-import')()
+    require('postcss-easy-import')({
+      extensions: ['.css', '.less', '.scss']
+    })
   ]
 }
