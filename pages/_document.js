@@ -3,6 +3,8 @@ import Document, {
   Main,
   NextScript
 } from 'next/document'
+// css/styles.less -> ../assets/css/styles.less
+// see .babelrc from more detail
 import styles from 'css/styles.less'
 
 export default class GlobalDocument extends Document {

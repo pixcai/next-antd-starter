@@ -62,6 +62,7 @@ typings/
 
 # Next.js
 .next
+build/
 
 # Mac
 .DS_Store
