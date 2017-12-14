@@ -17,7 +17,15 @@
     }],
     "transform-decorators-legacy"
   ],
-  "presets": ["env", "next/babel", "stage-0"],
+  "presets": ["env", "stage-0",
+    ["next/babel", {
+      "styled-jsx": {
+        "plugins": [
+          "styled-jsx-plugin-sass"
+        ]
+      }
+    }]
+  ],
   "env": {
     "development": {
       "plugins": ["inline-dotenv"]
