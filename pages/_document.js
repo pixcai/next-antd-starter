@@ -21,3 +21,4 @@ export default class GlobalDocument extends Document {
     )
   }
 }
+
