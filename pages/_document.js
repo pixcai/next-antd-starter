@@ -11,7 +11,7 @@ export default class GlobalDocument extends Document {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" /> 
           <link rel="shortcut icon" type="images/x-icon" href="/static/favicon.png" />
-          <style>{styles}</style>
+          <style dangerouslySetInnerHTML={{ __html: styles }} />
         </Head>
         <body>
           <Main />
